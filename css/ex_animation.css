@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@keyframes phonring {
+  0% {
+    transform: rotate(30deg);
+    font-size: 3.3rem;
+  }
+  10% {
+    transform: rotate(35deg);
+    font-size: 3.4rem;
+  }
+  15% {
+    transform: rotate(-10deg);
+    font-size: 3rem;
+  }
+  30% {
+    transform: rotate(-15deg);
+    font-size: 3rem;
+  }
+}
+
+.phonring {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+}
+.phonring a {
+  color: #fff;
+  display: block;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  background-color: red;
+  text-decoration: none;
+  animation: phonring 0.8s linear infinite both;
+}
+.text{
+  text-align: center;
+}
+.animate__backInLeft{
+  
+}

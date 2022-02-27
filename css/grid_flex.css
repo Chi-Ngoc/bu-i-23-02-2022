@@ -1,0 +1,528 @@
+/*
+*định nghĩa class theo breakpoint
+!- màn hình mobile:xxs:col-xxs-(number)
+!- màn hình Ipad mini: xs(extract small device): col-xs-(number)
+!- màn hình Ipad nằm dọc: sm: col-sm-(number)
+!- màn hình Ipad nằm ngang: md:col-md-(number)
+!- màn hình máy tính nhỏ: lg:col-lg-(number)
+!- màn hình máy tính lớn: col-(number)(Bởi vì đang xây dựng desktop)
+*/
+:root {
+  --container-width: 1170px;
+  --column-spacing: 10px;
+  --column-spacing-sm: 5px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.container-full {
+  padding: 0 var(--column-spacing);
+}
+
+.row {
+  margin-left: calc(0 - var(--column-spacing));
+  margin-right: calc(0 - var(--column-spacing));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+/*
+  định nghĩa với màn hình máy tính lớn: col-(number)
+*/
+
+.row-small {
+  margin-left: calc(0 - var(--column-spacing-sm));
+  margin-right: calc(0 - var(--column-spacing-sm));
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.row-collapse {
+  margin: 0;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  padding: 0 var(--column-spacing);
+}
+
+.row-small .col-1,
+.row-small .col-2,
+.row-small .col-3,
+.row-small .col-4,
+.row-small .col-5,
+.row-small .col-6,
+.row-small .col-7,
+.row-small .col-8,
+.row-small .col-9,
+.row-small .col-10,
+.row-small .col-11,
+.row-small .col-12 {
+  padding: 0 var(--column-spacing-sm);
+}
+
+.row-collapse .col-1,
+.row-collapse .col-2,
+.row-collapse .col-3,
+.row-collapse .col-4,
+.row-collapse .col-5,
+.row-collapse .col-6,
+.row-collapse .col-7,
+.row-collapse .col-8,
+.row-collapse .col-9,
+.row-collapse .col-10,
+.row-collapse .col-11,
+.row-collapse .col-12 {
+  padding: 0;
+}
+
+.col-1 {
+  max-width: calc(100% / (12 / 1));
+  flex-basis: calc(100% / (12 / 1));
+}
+
+.col-2 {
+  max-width: calc(100% / (12 / 2));
+  flex-basis: calc(100% / (12 / 2));
+}
+
+.col-3 {
+  max-width: calc(100% / (12 / 3));
+  flex-basis: calc(100% / (12 / 3));
+}
+
+.col-4 {
+  max-width: calc(100% / (12 / 4));
+  flex-basis: calc(100% / (12 / 4));
+}
+
+.col-5 {
+  max-width: calc(100% / (12 / 5));
+  flex-basis: calc(100% / (12 / 5));
+}
+
+.col-6 {
+  max-width: calc(100% / (12 / 6));
+  flex-basis: calc(100% / (12 / 6));
+}
+
+.col-7 {
+  max-width: calc(100% / (12 / 7));
+  flex-basis: calc(100% / (12 / 7));
+}
+
+.col-8 {
+  max-width: calc(100% / (12 / 8));
+  flex-basis: calc(100% / (12 / 8));
+}
+
+.col-9 {
+  max-width: calc(100% / (12 / 9));
+  flex-basis: calc(100% / (12 / 9));
+}
+
+.col-10 {
+  max-width: calc(100% / (12 / 10));
+  flex-basis: calc(100% / (12 / 10));
+}
+
+.col-11 {
+  max-width: calc(100% / (12 / 11));
+  flex-basis: calc(100% / (12 / 11));
+}
+
+.col-12 {
+  max-width: 100%;
+  flex-basis: 100%;
+}
+/*Màn hình máy tính nhỏ*/
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12 {
+  padding: 0 var(--column-spacing);
+}
+
+.row-small .col-lg-1,
+.row-small .col-lg-2,
+.row-small .col-lg-3,
+.row-small .col-lg-4,
+.row-small .col-lg-5,
+.row-small .col-lg-6,
+.row-small .col-lg-7,
+.row-small .col-lg-8,
+.row-small .col-lg-9,
+.row-small .col-lg-10,
+.row-small .col-lg-11,
+.row-small .col-lg-12 {
+  padding: 0 var(--column-spacing-sm);
+}
+
+.row-collapse .col-lg-1,
+.row-collapse .col-lg-2,
+.row-collapse .col-lg-3,
+.row-collapse .col-lg-4,
+.row-collapse .col-lg-5,
+.row-collapse .col-lg-6,
+.row-collapse .col-lg-7,
+.row-collapse .col-lg-8,
+.row-collapse .col-lg-9,
+.row-collapse .col-lg-10,
+.row-collapse .col-lg-11,
+.row-collapse .col-lg-12 {
+  padding: 0;
+}
+
+.col-1,
+.col-lg-1 {
+  max-width: calc(100% / (12 / 1));
+  flex-basis: calc(100% / (12 / 1));
+}
+
+.col-2,
+.col-lg-2 {
+  max-width: calc(100% / (12 / 2));
+  flex-basis: calc(100% / (12 / 2));
+}
+
+.col-3,
+.col-lg-3 {
+  max-width: calc(100% / (12 / 3));
+  flex-basis: calc(100% / (12 / 3));
+}
+
+.col-4,
+.col-lg-3 {
+  max-width: calc(100% / (12 / 4));
+  flex-basis: calc(100% / (12 / 4));
+}
+
+.col-5,
+.col-lg-4 {
+  max-width: calc(100% / (12 / 5));
+  flex-basis: calc(100% / (12 / 5));
+}
+
+.col-6,
+.col-lg-6 {
+  max-width: calc(100% / (12 / 6));
+  flex-basis: calc(100% / (12 / 6));
+}
+
+.col-7,
+.col-lg-7 {
+  max-width: calc(100% / (12 / 7));
+  flex-basis: calc(100% / (12 / 7));
+}
+
+.col-8,
+.col-lg-8 {
+  max-width: calc(100% / (12 / 8));
+  flex-basis: calc(100% / (12 / 8));
+}
+
+.col-9,
+.col-lg-9 {
+  max-width: calc(100% / (12 / 9));
+  flex-basis: calc(100% / (12 / 9));
+}
+
+.col-10,
+.col-lg-10 {
+  max-width: calc(100% / (12 / 10));
+  flex-basis: calc(100% / (12 / 10));
+}
+
+.col-11,
+.col-lg-11 {
+  max-width: calc(100% / (12 / 11));
+  flex-basis: calc(100% / (12 / 11));
+}
+
+.col-12,
+.col-lg-12 {
+  max-width: 100%;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  /*Màn hình máy tính nhỏ*/
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  /*chia cột với màn hình máy tính nhỏ*/
+
+  .col-lg-1 {
+    max-width: calc(100% / (12 / 1));
+    flex-basis: calc(100% / (12 / 1));
+  }
+
+
+  .col-lg-2 {
+    max-width: calc(100% / (12 / 2));
+    flex-basis: calc(100% / (12 / 2));
+  }
+
+
+  .col-lg-3 {
+    max-width: calc(100% / (12 / 3));
+    flex-basis: calc(100% / (12 / 3));
+  }
+
+
+  .col-lg-3 {
+    max-width: calc(100% / (12 / 4));
+    flex-basis: calc(100% / (12 / 4));
+  }
+
+
+  .col-lg-4 {
+    max-width: calc(100% / (12 / 5));
+    flex-basis: calc(100% / (12 / 5));
+  }
+
+
+  .col-lg-6 {
+    max-width: calc(100% / (12 / 6));
+    flex-basis: calc(100% / (12 / 6));
+  }
+
+
+  .col-lg-7 {
+    max-width: calc(100% / (12 / 7));
+    flex-basis: calc(100% / (12 / 7));
+  }
+
+
+  .col-lg-8 {
+    max-width: calc(100% / (12 / 8));
+    flex-basis: calc(100% / (12 / 8));
+  }
+
+
+  .col-lg-9 {
+    max-width: calc(100% / (12 / 9));
+    flex-basis: calc(100% / (12 / 9));
+  }
+
+  .col-lg-10 {
+    max-width: calc(100% / (12 / 10));
+    flex-basis: calc(100% / (12 / 10));
+  }
+
+  .col-lg-11 {
+    max-width: calc(100% / (12 / 11));
+    flex-basis: calc(100% / (12 / 11));
+  }
+
+  .col-lg-12 {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .col-lg-1,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  /*chia cột với màn hình máy tính nhỏ*/
+
+  .col-md-1 {
+    max-width: calc(100% / (12 / 1));
+    flex-basis: calc(100% / (12 / 1));
+  }
+
+
+  .col-md-2 {
+    max-width: calc(100% / (12 / 2));
+    flex-basis: calc(100% / (12 / 2));
+  }
+
+
+  .col-md-3 {
+    max-width: calc(100% / (12 / 3));
+    flex-basis: calc(100% / (12 / 3));
+  }
+
+
+  .col-md-3 {
+    max-width: calc(100% / (12 / 4));
+    flex-basis: calc(100% / (12 / 4));
+  }
+
+
+  .col-md-4 {
+    max-width: calc(100% / (12 / 5));
+    flex-basis: calc(100% / (12 / 5));
+  }
+
+
+  .col-md-6 {
+    max-width: calc(100% / (12 / 6));
+    flex-basis: calc(100% / (12 / 6));
+  }
+
+
+  .col-md-7 {
+    max-width: calc(100% / (12 / 7));
+    flex-basis: calc(100% / (12 / 7));
+  }
+
+
+  .col-md-8 {
+    max-width: calc(100% / (12 / 8));
+    flex-basis: calc(100% / (12 / 8));
+  }
+
+
+  .col-md-9 {
+    max-width: calc(100% / (12 / 9));
+    flex-basis: calc(100% / (12 / 9));
+  }
+
+  .col-md-10 {
+    max-width: calc(100% / (12 / 10));
+    flex-basis: calc(100% / (12 / 10));
+  }
+
+  .col-md-11 {
+    max-width: calc(100% / (12 / 11));
+    flex-basis: calc(100% / (12 / 11));
+  }
+
+  .col-md-12 {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  /*chia cột với màn hình máy tính nhỏ*/
+
+  .col-sm-1 {
+    max-width: calc(100% / (12 / 1));
+    flex-basis: calc(100% / (12 / 1));
+  }
+
+
+  .col-sm-2 {
+    max-width: calc(100% / (12 / 2));
+    flex-basis: calc(100% / (12 / 2));
+  }
+
+
+  .col-sm-3 {
+    max-width: calc(100% / (12 / 3));
+    flex-basis: calc(100% / (12 / 3));
+  }
+
+
+  .col-sm-3 {
+    max-width: calc(100% / (12 / 4));
+    flex-basis: calc(100% / (12 / 4));
+  }
+
+
+  .col-sm-4 {
+    max-width: calc(100% / (12 / 5));
+    flex-basis: calc(100% / (12 / 5));
+  }
+
+
+  .col-sm-6 {
+    max-width: calc(100% / (12 / 6));
+    flex-basis: calc(100% / (12 / 6));
+  }
+
+
+  .col-sm-7 {
+    max-width: calc(100% / (12 / 7));
+    flex-basis: calc(100% / (12 / 7));
+  }
+
+
+  .col-sm-8 {
+    max-width: calc(100% / (12 / 8));
+    flex-basis: calc(100% / (12 / 8));
+  }
+
+
+  .col-sm-9 {
+    max-width: calc(100% / (12 / 9));
+    flex-basis: calc(100% / (12 / 9));
+  }
+
+  .col-sm-10 {
+    max-width: calc(100% / (12 / 10));
+    flex-basis: calc(100% / (12 / 10));
+  }
+
+  .col-sm-11 {
+    max-width: calc(100% / (12 / 11));
+    flex-basis: calc(100% / (12 / 11));
+  }
+
+  .col-sm-12 {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
